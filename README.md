@@ -1,78 +1,133 @@
-# TutorLink-Lite (CS361 Project)
 
-TutorLink-Lite is a web-based student-tutor matching platform designed to connect students with trusted tutors. The application allows users to register as either students or tutors, search and filter for profiles by subject, location, or price, compare multiple tutors side-by-side, and manage lesson bookings via a centralized dashboard.
+# CS361_Project
+
+## TutorLink-Lite
+
+A simple tutor–student matching platform built with **PHP, MySQL, HTML, CSS, and JavaScript**.
+
+---
+
+## 📌 Overview
+
+TutorLink-Lite helps students find tutors easily by searching and filtering based on:
+
+- Subject
+- City
+- Hourly rate
+- Teaching mode (online / in-person)
+- Ratings
+
+Students can also compare tutors side-by-side and book sessions.
 
 ---
 
 ## 🚀 Features
 
-* **User Authentication & Roles:** Secure signup and login for **Students**, **Tutors**, and **Admins** with secure client-side form validation.
-* **Smart Search & Previews:** Dynamic, asynchronous homepage preview and filtering capabilities to find tutors quickly.
-* **Side-by-Side Comparison:** Interactive comparison matrix allowing users to evaluate up to 3 tutors simultaneously, complete with video preview integration.
-* **Booking System:** Complete end-to-end scheduling logic linking students directly with their selected tutors.
-* **Personalized Dashboards:** Dedicated operational views tailored specifically to a user's role (Student vs. Tutor).
+### 👨‍🎓 For Students
+- Sign up and log in
+- Search for tutors
+- Filter by subject, city, and price
+- Compare up to 3 tutors
+- Book tutoring sessions
+- View dashboard
+
+### 👩‍🏫 For Tutors
+- Create tutor profile
+- Add subjects and hourly rate
+- Upload intro video (sample support included)
+- Manage bookings via dashboard
+
+### ⚙️ General Features
+- Authentication system (session-based)
+- Role-based dashboards (student / tutor)
+- Client-side validation (signup form)
+- Tutor comparison tool
+- Responsive UI design
 
 ---
 
-## 📂 Project Structure
+## 🛠️ Tech Stack
 
-```text
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** PHP  
+- **Database:** MySQL  
+- **Server:** Apache (XAMPP / WAMP recommended)
+
+---
+
+## 🗂️ Project Structure
+
+```
+
 CS361_Project/
 │
-├── css/
-│   └── style.css            # Main application styling (responsive design)
+├── css/                  # Stylesheets
+├── js/                   # JavaScript files
+├── php/                  # Backend PHP logic
+├── uploads/videos/      # Tutor demo videos
 │
-├── js/
-│   ├── main.js              # Client-side dynamic homepage previews 
-│   ├── compare.js           # Multi-tutor comparison matrix logic
-│   └── signup_validation.js # Client-side registration validation
-│
-├── php/                     # Server-side business logic and pages
-│   ├── db.php               # Database connection setup
-│   ├── auth.php             # Session management
-│   ├── signup.php / login.php
-│   ├── search.php           # Core search system and API endpoints
-│   ├── book.php             # Handles session scheduling logic
-│   ├── dashboard_student.php
-│   ├── dashboard_tutor.php
-│   └── ... (additional views and mutations)
-│
-├── uploads/videos/          # Storage directory for tutor video introductions
-│   ├── sample1.mp4
-│   └── sample2.mp4
-│
-├── db_seed.sql              # MySQL schema definition and demo seed data
-├── index.php                # System homepage / application entry point
+├── index.php            # Home page
+├── db_seed.sql          # Database schema + sample data
 └── README.md
-🛠️ Installation & Setup
-1. Environment Requirements
-PHP: version 8.0 or newer recommended.
 
-Database: MySQL / MariaDB server.
+````
 
-An active local server suite such as XAMPP, MAMP, or Laragon.
+---
 
-2. Database Initialization
-Open your database administration tool (e.g., phpMyAdmin) or use your MySQL CLI.
+## 🗄️ Database Setup
 
-Import the db_seed.sql file to create the tutorlink_lite database and populate its structural tables (users, tutors, bookings, reviews).
+1. Create a MySQL database:
+```sql
+CREATE DATABASE tutorlink_lite;
+````
 
-Note: Make sure to update the REPLACE_WITH_HASH placeholders inside the seeded rows with valid PHP password hashes if you intend to log into the demo accounts.
+2. Import the file:
 
-PHP
-// Generate a secure hash using:
-echo password_hash('Password123', PASSWORD_DEFAULT);
-3. Connection Configuration
-Ensure your credentials inside php/db.php reflect your local environment:
+```
+db_seed.sql
+```
 
-PHP
-$host = 'localhost';
-$db   = 'tutorlink_lite';
-$user = 'root'; // Update to your DB username
-$pass = '';     // Update to your DB password
-4. Running Locally
-Clone the project directly into your server's root directory (e.g., htdocs or www):
+3. Update `db.php` with your database credentials.
 
-Bash
-git clone [https://github.com/Rwzan/CS361_Project.git](https://github.com/Rwzan/CS361_Project.git)
-Open your browser and navigate to http://localhost/CS361_Project/index.php.
+---
+
+## ▶️ How to Run the Project
+
+1. Install **XAMPP / WAMP**
+2. Place project inside `htdocs/`
+3. Start Apache & MySQL
+4. Import database (`db_seed.sql`)
+5. Open in browser:
+
+```
+http://localhost/CS361_Project/index.php
+```
+
+---
+
+## 🔐 Default Accounts (Demo)
+
+You can create accounts via signup page or use seeded users in database.
+
+---
+
+## 📸 Preview
+
+* Home page with search bar
+* Tutor comparison tool
+* Student & tutor dashboards
+* Booking system
+
+---
+
+## 📌 Notes
+
+* This is a student project (CS361)
+* Some features are simplified for learning purposes
+* Passwords should be hashed using `password_hash()` in PHP
+
+---
+
+## 👩‍💻 Author
+
+CS361 Project – TutorLink-Lite Team
