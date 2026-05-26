@@ -130,4 +130,4 @@ You can create accounts via signup page or use seeded users in database.
 
 ## 👩‍💻 Author
 
-Rwzan and CS361 Project Team
+**Rwzan**
