@@ -1,0 +1,89 @@
+/* Simple responsive styles for TutorLink-Lite */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+header {
+    background: #800020;
+    color: #fff;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+main {
+    padding: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero {
+    background: #fdeef2;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.search-inline input {
+    padding: 0.5rem;
+    width: 60%;
+    max-width: 400px;
+}
+
+button {
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    border: none;
+    background: #b0003a;
+    color: #fff;
+    cursor: pointer;
+}
+
+.preview-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background: #fff;
+    padding: 0.6rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #f1f1f1;
+    padding: 0.8rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+@media (max-width: 600px) {
+    .search-inline input {
+        width: 100%;
+    }
+}
